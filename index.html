@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="ad.size" content="width=728, height=90">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lexus - Leaderboard - 728x90 - non-polite</title>
+
+	<style type="text/css">
+		/* Generic Style */
+		html, body {margin: 0; padding: 0; }
+		html { box-sizing: border-box; }
+		*, *:before, *:after { box-sizing: inherit; }
+		.size { width: 728px; height: 90px; }
+
+		@font-face {
+    font-family: 'Nobel';
+    src: local('Nobel-Regular'),
+        url('Nobel-Regular.woff2') format('woff2'),
+        url('Nobel-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+		body {
+			font-family: 'Nobel'; font-weight: normal; font-style: normal;
+			font-smoothing: antialiased;
+			-webkit-font-smoothing: antialiased;
+			color: #333;
+			background: #fff;
+			overflow:hidden;
+		}
+
+		a,
+		a:hover,
+		a:active,
+		a:focus {
+			color: #333;
+			text-decoration: none;
+		}
+
+		#banner {
+			position: relative;
+			overflow: hidden;
+			border: 1px solid #000;
+			background: #000;
+		}
+
+		.clickarea {
+			position: absolute;
+			cursor: pointer;
+			z-index: 90;
+		}
+
+		/* Standard Toyota Style */
+		.toyota {
+			color: #eb0a1e;
+		}
+		.logo {
+			position: absolute;
+			top: 7px;
+			right: -80px;
+			z-index: 10;
+			opacity: 0;
+		}
+
+		.jumper {
+			position: absolute;
+			top: 5px;
+			left: 300px;
+			opacity: 0;
+			z-index:10;
+		}
+
+		.dealership {
+			position: absolute;
+			top: 50px;
+			left: 425px;
+			width: 150px;
+			font-size: 9px;
+			line-height: 17px;
+			text-align: center;
+			opacity: 0;
+			color:white;
+			z-index: 15;
+			font-weight:normal;
+		}
+
+			.dealership_title {
+				display: block;
+				font-size: 12px;
+				line-height: 14px;
+			}
+			.sml_dealer{
+				font-size: 11px;
+				line-height:20px;
+			}	
+		.cta_btn{
+			position: absolute;
+			right: 30px;
+			bottom: 20px;
+			background: grey;
+			color: #fff;
+			z-index: 90;
+			opacity: 0;
+		}
+		.cta_btn_002{
+			position: absolute;
+			left: 10px;
+			bottom: 10px;
+			border-radius: 6px;
+			background: #eb0a1e;
+			color: #fff;
+			z-index: 10;
+			opacity: 0;
+		}
+			.btn {
+				font-size: 10px;
+				height: 20px;
+				line-height: 20px;
+				margin: 0 15px;
+			}
+		.btn_002 {
+				font-size: 11px;
+				height: 24px;
+				line-height: 24px;
+				margin: 0 10px;
+			}
+		.disclaimer_btn {
+			position: absolute;
+			left: 15px;
+			top: 5px;
+			font-size: 10px;
+			cursor: pointer;
+			color:white;
+			z-index: 100;
+			opacity: 0;
+		}
+
+		.disclaimer {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			background: rgba(0,0,0,0.8);
+			width: 728px;
+			height: 90px;
+			padding: 10px 15px;
+			font-size: 11px;
+			color: #fff;
+			overflow: auto;
+			z-index: 200;
+			opacity: 1;
+			display: none;
+		}
+
+			.disclaimer > a {
+				color: #fff;
+				text-decoration: underline;
+			}
+
+			.disclaimer > h3 {
+				margin-top: 0;
+			}
+
+			.disclaimer_close_btn {
+				position: absolute;
+				right: 20px;
+				top: 10px;
+				color: #fff;
+				font-size: 12px;
+				font-weight: bold;
+				font-family: Helvetica, Arial, sans-serif;
+				line-height: 13px;
+				z-index: 10;
+				cursor: pointer;
+			}
+
+		/* Banner Specific class Styles, bg_001, txt_001, car_001 etc to include in here */
+		/*remember that empty divs can conatiner gradients*/
+				/* Banner Specific Style */
+		.bg_001{
+			position:absolute;
+			opacity:0;
+			top:0px;
+			left:0px;
+/*			top:-140px;
+			left:0px;*/
+			z-index:2;
+		}
+		.bg_002{
+			position:absolute;
+			opacity:0;
+			top:0px;
+			left:0px;
+/*			top:-130px;
+			left:0px;*/
+			z-index:3;
+		}
+		.grad_001{
+			position:absolute;
+			opacity:0;
+			top:0px;
+			left:0px;
+			width:728px;
+			height:90px;
+			background-color: black;
+			z-index:4;
+		}
+		.txt_001{
+			position:absolute;
+			opacity:0;
+			z-index:4;
+			top:0px;
+			left:0px;
+		}
+		.txt_002{
+			position:absolute;
+			opacity:0;
+			z-index:4;
+			top:0px;
+			left:0px;
+		}
+		.txt_003{
+			position:absolute;
+			opacity:0;
+			z-index:4;
+			top:0px;
+			left:0px;
+			/*font-size: 33px;*/
+
+		}
+		.txt_004{
+			position:absolute;
+			opacity:0;
+			z-index:5;
+			top:25px;
+			left:22px;
+			color:white;
+			font-size: 20px;
+			font-weight: normal;
+		}
+		.line_001{
+			position:absolute;
+			opacity:0;
+			z-index:5;
+			top:27px;
+			left:15px;
+			width:1px;
+			height:40px;
+			background-color: white;
+
+}
+
+
+
+	</style>
+
+	<!-- [IF] platform == DoubleClick Studio (DCRM) || DoubleClick Manager (DCM) || DoubleClick Bid Manager (DBM) -->
+	<script type="text/javascript" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
+	<!-- GSAP - TimelineMax v1.18 -->
+	<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
+</head>
+<body>
+
+	<!-- MYADBOX - SWAPPABLE DEALERSHIP -->
+  <div swappable_section="Dealership" hidden valid="true">
+    <div field_name="dealership1" field_type="dealership" value="1010"></div>
+  </div>
+
+  <!-- MYADBOX - FALLBACK IMAGE AUTO GENERATION -->
+  <div id="resource" hidden>
+    <div id="meta">
+      <span id="duration">18</span> <!-- enter the time (in seconds) when you want the snapshot to be taken -->
+      <span id="main_frame">banner</span><!-- enter the id of the main banner div -->
+    </div>
+  </div>
+
+		<div id="banner" class="size stage">
+			<!-- DIVS -->
+		  	<img src="images/logo_001.png" id="stage_logo_001" class="logo">
+		  	<img src="images/bg_001.jpg" id="stage_bg_001" class="bg_001">
+		  	<img src="images/bg_002.jpg" id="stage_bg_002" class="bg_002">
+		  	<div id="stage_grad_001" class="grad_001"></div>
+</div>
+		  	<div id="stage_line_001" class="line_001"></div>
+
+
+		  	
+			<div id="stage_disclaimer_btn" class="disclaimer_btn">Disclaimer</div>
+			<div id="stage_cta_btn" class="cta_btn"><span class="btn">LEARN MORE</span></div>
+			<div id="stage_cta_btn_002" class="cta_btn_002"><span class="btn_002">FIND OUT MORE</span></div>
+
+			
+			<img src="images/txt_001.png" id="stage_txt_001" class="txt_001">
+			<img src="images/txt_002.png" id="stage_txt_002" class="txt_002">
+			<img src="images/txt_003.png" id="stage_txt_003" class="txt_003">
+
+
+			<div id="stage_txt_004" class="txt_004">REFLECTIONS DETAILING<br>SERVICING STARTING AT : $<span swappable_section="Reflections Detailing Price" valid="true"><span field_name="88329_alignmentprice" field_label="Reflections Detailing Price" field_type="text" value="xxxx">xxxx</span></span>
+</div>
+			
+
+
+			<!-- //DEALERSHIP INFORMATION -->
+
+	  	<div dealership1="" id="stage_dealership" class="dealership">
+	  		<span key="dealership_1_name" class="dealership_title">Test Dealership 3</span>
+	  	</div>
+
+	  	<!-- ClickTag [for DoubleClick Studio (DCRM) / Sizmek / DoubleClick for Publishers (DFP) ] -->
+			<div id="main-click" class="clickarea size"><!--Blank DIV to capture the main exit--></div>
+		
+
+	<div id="stage_disclaimer" class="disclaimer">
+		<span id="stage_disclaimer_close_btn" class="disclaimer_close_btn">X</span>
+		<h3>Disclaimer</h3>
+	    
+	    	<div id="stage_disclaimerDetails">
+<span swappable_section="Editable Disclaimer" valid="true"><span field_name="88329_editabledisclaimer" field_label="Editable Disclaimer" field_type="textarea" value="Disclaimer goes here">Disclaimer goes here</span></span>
+			</div> 
+	</div>
+
+	<script>
+		"use strict"
+
+		/* [ONLY IF] platform == DoubleClick Studio (DCRM) */
+		var Banner = Banner || {}, addListeners, exitHandler, mainClick = document.getElementById('main-click');		   
+
+    Banner.init = function() {
+			addListeners();
+			Banner.animate();
+		}
+
+		var addListeners = function() {
+			mainClick.addEventListener('click', exitHandler, false);
+		};
+
+		var exitHandler = function(e) {
+    	Enabler.exit('DEFAULT_EXIT');
+    }
+
+    if (Enabler.isInitialized()) {
+    	Banner.init();
+    } else {
+    	Enabler.addEventListener(studio.events.StudioEvent.INIT, Banner.init)
+    } 
+
+    /* [END] DoubleClick Studio (DCRM) */
+
+
+    /*******************
+    	BANNER ANIMATION
+    ********************/
+
+		var tl;
+		var curLoop = 0;
+		var maxLoop = 3;
+
+		Banner.animate = function(){
+
+	    // Initiating Animation Timeline
+	    tl = new TimelineMax({repeat:maxLoop, onRepeat:resetAnimation});	    
+
+	    setupAnimation();
+		};
+		
+		var setupAnimation = function() {
+	    // Timeline Animation Here
+	    tl
+
+
+	    .fromTo(stage_bg_001, 1.5, {autoAlpha:0, top:0}, {autoAlpha:1, top:'-130',ease:Power1.easeOut})
+	    .to(stage_grad_001, 0.7, {opacity:0.5}, '+=0.5')
+	    .fromTo(stage_txt_001, 0.5, {autoAlpha:0, top:100}, {autoAlpha:1, top:0}, '-=0.7')
+
+	    .to(stage_txt_001, 0.8, {autoAlpha:0, top:'-30'}, '+=2')
+	    .to([stage_bg_001, stage_grad_001], 0.5, {autoAlpha:0, ease:Power1.easeOut}, '-=0.5')
+	    .fromTo([stage_txt_003, stage_txt_002], 0.5, {autoAlpha:0, top:100}, {autoAlpha:1, top:0})
+	    .to(stage_bg_002, 1, {autoAlpha:1, ease:Power1.easeOut}, '+=0.8')
+	    .to(stage_grad_001, 0.7, {opacity:0}, '-=1')
+	    .to([stage_txt_002, stage_txt_003], 0.8, {autoAlpha:0, top:'-30'}, '+=2')
+
+	    .to(stage_logo_001, 0.5, {autoAlpha:1})
+	    .fromTo(stage_txt_004, 0.5, {autoAlpha:0, top:100}, {autoAlpha:1, top:25})
+	    .fromTo(stage_line_001, 0.5, {autoAlpha:0, top:102}, {autoAlpha:1, top:27}, '-=0.5')
+
+	    .to([stage_disclaimer_btn, stage_cta_btn, stage_dealership], 0.4, {autoAlpha:1}, '-=0.4')
+	    .addLabel('jumperHook')
+
+	    .to([stage_txt_004, stage_line_001, stage_disclaimer_btn, stage_cta_btn, stage_dealership, stage_bg_002, stage_logo_001], 0.5, {autoAlpha:0, ease:Power1.easeOut}, '+=3')
+
+	     ;
+
+      console.log('Animation duration: ' + tl.duration().toFixed(2));
+
+	    // Events
+	    document.getElementById('stage_disclaimer_btn').addEventListener('click', disclaimerShow);
+	    document.getElementById('stage_disclaimer_close_btn').addEventListener('click', disclaimerHide);
+		}
+
+		var resetAnimation = function() {
+		  curLoop++;
+		  if(curLoop >= maxLoop) {
+		  	tl.addPause('jumperHook');
+		  }
+		}
+
+		// Disclaimer
+		var disclaimerShow = function(){ //Show
+	    tl.pause();
+	    TweenLite.set(stage_disclaimer, {display: "block"});
+	    TweenLite.fromTo(stage_disclaimer, 0.5, {opacity: 0}, {opacity: 1});
+		}
+
+		var disclaimerHide = function() { // Hide
+	    TweenLite.fromTo(stage_disclaimer, 0.5, {opacity: 1}, {opacity: 0});
+	    TweenLite.set(stage_disclaimer, {display: "none"});
+	    if(curLoop < maxLoop) {
+	    	tl.play();
+	    }
+		}
+		
+	</script>
+</body>
+</html>
